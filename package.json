@@ -1,26 +1,55 @@
 {
-  "name": "react-cdk",
+  "name": "react-app-cdk",
   "version": "0.1.0",
   "bin": {
-    "react-cdk": "bin/react-cdk.js"
+    "react-app-cdk": "bin/cdk.js"
   },
   "scripts": {
-    "build": "tsc",
     "watch": "tsc -w",
     "test": "jest",
-    "cdk": "cdk"
+    "cdk": "cdk",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@types/jest": "^29.5.14",
     "@types/node": "22.7.9",
+    "aws-cdk": "2.175.0",
     "jest": "^29.7.0",
     "ts-jest": "^29.2.5",
-    "aws-cdk": "2.175.0",
     "ts-node": "^10.9.2",
     "typescript": "~5.6.3"
   },
   "dependencies": {
+    "@aws-cdk/aws-cloudfront": "^1.203.0",
+    "@aws-cdk/aws-cloudfront-origins": "^1.203.0",
+    "@aws-cdk/aws-s3": "^1.203.0",
+    "@aws-cdk/aws-s3-deployment": "^1.203.0",
+    "ajv": "^8.17.1",
     "aws-cdk-lib": "2.175.0",
-    "constructs": "^10.0.0"
+    "constructs": "^10.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-scripts": "^5.0.1"
   }
 }
